@@ -1,0 +1,413 @@
+{
+	"info": {
+		"_postman_id": "e67f0a3f-63c9-40aa-820a-5c9d3eea21a9",
+		"name": "0.a personal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28233328"
+	},
+	"item": [
+		{
+			"name": "trail collections",
+			"item": [
+				{
+					"name": "check health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/contextPath/api/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"contextPath",
+								"api",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "smart",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"smartMeterId\": <smartMeterId>,\n  \"electricityReadings\": [\n    {\n      \"time\": <time>,\n      \"reading\": <reading>\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/readings/read/smart-meter-0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"readings",
+								"read",
+								"smart-meter-0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSeats A",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/contextPath/api2/seats?sectionName=A",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"contextPath",
+								"api2",
+								"seats"
+							],
+							"query": [
+								{
+									"key": "sectionName",
+									"value": "A"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSeats User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/contextPath/api2/seats/user?mail=iamrahul@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"contextPath",
+								"api2",
+								"seats",
+								"user"
+							],
+							"query": [
+								{
+									"key": "mail",
+									"value": "iamrahul@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSeats B Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/contextPath/api2/seats?sectionName=B",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"contextPath",
+								"api2",
+								"seats"
+							],
+							"query": [
+								{
+									"key": "sectionName",
+									"value": "B"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "purchase",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/contextPath/api2/purchase?name=kella poojita&email=iamrahul@gmail.com&from=London&to=Turkey",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"contextPath",
+								"api2",
+								"purchase"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "kella poojita"
+								},
+								{
+									"key": "email",
+									"value": "iamrahul@gmail.com"
+								},
+								{
+									"key": "from",
+									"value": "London"
+								},
+								{
+									"key": "to",
+									"value": "Turkey"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modify Seat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/contextPath/api2/modifySeat?fromSeatIndex=A1&toSeatIndex=B2&mail=iamsuma@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"contextPath",
+								"api2",
+								"modifySeat"
+							],
+							"query": [
+								{
+									"key": "fromSeatIndex",
+									"value": "A1"
+								},
+								{
+									"key": "toSeatIndex",
+									"value": "B2"
+								},
+								{
+									"key": "mail",
+									"value": "iamsuma@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Folder",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ratingapi",
+			"item": [
+				{
+					"name": "check",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/myapp/api/employee/check",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"myapp",
+								"api",
+								"employee",
+								"check"
+							]
+						},
+						"description": "Generated from cURL: curl -X POST http://localhost:8080/api/employee/save \\\n-H \"Content-Type: application/json\" \\\n-d '{\n  \"id\": 1,\n  \"name\": \"John Doe\",\n  \"department\": \"HR\"\n}'\n"
+					},
+					"response": []
+				},
+				{
+					"name": "save employee",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"employeeid\": null,\n  \"name\": \"sumajjnth\",\n  \"email\": \"mail.null\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/myapp/api/employee/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"myapp",
+								"api",
+								"employee",
+								"save"
+							]
+						},
+						"description": "Generated from cURL: curl -X POST http://localhost:8080/api/employee/save \\\n-H \"Content-Type: application/json\" \\\n-d '{\n  \"id\": 1,\n  \"name\": \"John Doe\",\n  \"department\": \"HR\"\n}'\n"
+					},
+					"response": []
+				},
+				{
+					"name": "self review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": null,\n  \"reviewText\": \"This is my self-review text.\",\n  \"submittedAt\": \"2024-12-10T10:00:00\",\n  \"reviewTextShort\": \"Good progress.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/myapp/api/employee/1/self-review",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"myapp",
+								"api",
+								"employee",
+								"1",
+								"self-review"
+							]
+						},
+						"description": "Generated from cURL: curl -X POST http://localhost:8080/api/employees/{employeeId}/self-review \\\n-H \"Content-Type: application/json\" \\\n-d '{\n  \"id\": null,\n  \"reviewText\": \"This is my self-review text.\",\n  \"submittedAt\": \"2024-12-10T10:00:00\",\n  \"reviewTextShort\": \"Good progress.\"\n}'\n"
+					},
+					"response": []
+				},
+				{
+					"name": "manager_review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": null,\n  \"reviewText\": \"Excellent performance this quarter.\",\n  \"rating\": 4,\n  \"submittedAt\": \"2024-12-10T10:00:00\",\n  \"reviewTextShort\": \"Great!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/myapp/api/employee/1/manager-review",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"myapp",
+								"api",
+								"employee",
+								"1",
+								"manager-review"
+							]
+						},
+						"description": "Generated from cURL: curl -X POST \"http://localhost:8080/api/employees/1/manager-review\" \\\n-H \"Content-Type: application/json\" \\\n-d '{\n  \"id\": null,\n  \"reviewText\": \"Excellent performance this quarter.\",\n  \"rating\": 4.5,\n  \"submittedAt\": \"2024-12-10T10:00:00\",\n  \"reviewTextShort\": \"Great!\"\n}'\n"
+					},
+					"response": []
+				},
+				{
+					"name": "summary",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8082/myapp/api/employee/1/summary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"myapp",
+								"api",
+								"employee",
+								"1",
+								"summary"
+							]
+						},
+						"description": "Generated from cURL: curl -X GET \"http://localhost:8080/api/employees/101/summary\" \\\n-H \"Content-Type: application/json\""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
